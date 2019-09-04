@@ -1,5 +1,5 @@
 {
-  "name": "capacitor-app-analytics",
+  "name": "@clipboardhealth/capacitor-app-analytics",
   "version": "0.0.1",
   "description": "UXCam and FullStory app analytics",
   "main": "dist/esm/index.js",
@@ -41,9 +41,10 @@
   },
   "repository": {
     "type": "git",
-    "url": " https://github.com/ClipboardHealth/capacitor-app-analytics.git"
+    "url": "git+https://github.com/ClipboardHealth/capacitor-app-analytics.git"
   },
   "bugs": {
     "url": " https://github.com/ClipboardHealth/capacitor-app-analytics.git/issues"
-  }
+  },
+  "homepage": "https://github.com/ClipboardHealth/capacitor-app-analytics#readme"
 }
