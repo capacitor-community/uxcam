@@ -4,16 +4,15 @@ declare module "@capacitor/core" {
   }
 }
 
-export interface AnalyticsUserInfo {
-  displayName: string
-  alias: string
-  email: string
-  [key: string]: string
+export interface UserProperty {
+  userId: string
+  name: string
+  userInfo: {[key: string]: string}
 }
 
 export interface CapacitorAppAnalyticsPlugin {
   startWithKey(options: { UXCamKey: string }): Promise<void>;
-  setUserProperty(userId: string, userInfo: AnalyticsUserInfo): Promise<void>;
+  setUserProperty(options: UserProperty): Promise<void>;
   tagScreenName(options: { screenName: string }): Promise<void>
   stopSession(): Promise<void>
 }

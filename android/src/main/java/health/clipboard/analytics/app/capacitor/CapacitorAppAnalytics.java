@@ -24,8 +24,13 @@ public class CapacitorAppAnalytics extends Plugin {
 
     @PluginMethod()
     public void setUserProperty(PluginCall call) {
+        String name = call.getString("name");
         String userId = call.getString("userId");
-        UXCam.setUserIdentity(userId);
+
+        UXCam.setUserIdentity(name);
+        UXCam.setUserProperty("user_id", userId);
+        UXCam.setUserProperty("alias", name);
+
 
         JSObject userInfo = call.getObject("userInfo", new JSObject());
         Iterator<String> userProperties = userInfo.keys();

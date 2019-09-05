@@ -1,6 +1,6 @@
 import { registerWebPlugin, WebPlugin } from '@capacitor/core';
 
-import { AnalyticsUserInfo, CapacitorAppAnalyticsPlugin } from './definitions';
+import { CapacitorAppAnalyticsPlugin, UserProperty } from './definitions';
 
 declare const FS: any;
 
@@ -18,12 +18,15 @@ export class CapacitorAppAnalyticsWeb extends WebPlugin
     return;
   }
 
-  async setUserProperty(userId: string, userInfo: AnalyticsUserInfo): Promise<void> {
-    FS.identify(userId, { ...userInfo });
+  async setUserProperty(options: UserProperty): Promise<void> {
+    FS.identify(options.userId, {
+      displayName: options.name,
+      ...options.userInfo,
+    });
   }
 
   async stopSession(): Promise<void> {
-    FS.identify(false)
+    FS.identify(false);
   }
 
   async tagScreenName(): Promise<void> {

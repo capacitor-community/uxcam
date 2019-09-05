@@ -18,7 +18,11 @@ public class CapacitorAppAnalytics: CAPPlugin {
     
     @objc func setUserProperty(_ call: CAPPluginCall) {
         let userId = call.getString("userId") ?? ""
-        UXCam.setUserIdentity(userId)
+        let name = call.getString("name") ?? ""
+        
+        UXCam.setUserIdentity(name)
+        UXCam.setUserProperty("user_id", value: userId)
+        UXCam.setUserProperty("alias", value: name)
         
         let userInfo = call.getObject("userInfo", defaultValue: [:])
         

@@ -24,12 +24,14 @@
     "dist/",
     "ios/",
     "android/",
-    "CapacitorAppAnalytics.podspec"
+    "ClipboardhealthCapacitorAppAnalytics.podspec"
   ],
   "keywords": [
     "capacitor",
     "plugin",
-    "native"
+    "native",
+    "uxcam",
+    "fullstory"
   ],
   "capacitor": {
     "ios": {
