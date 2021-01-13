@@ -1,27 +1,22 @@
 PODS:
-  - Capacitor (1.1.1):
-    - CapacitorCordova (= 1.1.1)
-  - CapacitorCordova (1.1.1)
-  - UXCam (3.1.5)
+  - Capacitor (2.4.6):
+    - CapacitorCordova
+  - CapacitorCordova (2.4.6)
 
 DEPENDENCIES:
   - "Capacitor (from `../node_modules/@capacitor/ios`)"
-  - UXCam
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - CapacitorCordova
-    - UXCam
+  - "CapacitorCordova (from `../node_modules/@capacitor/ios`)"
 
 EXTERNAL SOURCES:
   Capacitor:
     :path: "../node_modules/@capacitor/ios"
+  CapacitorCordova:
+    :path: "../node_modules/@capacitor/ios"
 
 SPEC CHECKSUMS:
-  Capacitor: f245413edff86ebf3d18bf76cadaee4be58b4a04
-  CapacitorCordova: 25811fd90c0ea23ea135a42a217d1918873fa566
-  UXCam: c1ceba2bc5c58badf0ef751c31ebf51dd5072f6b
+  Capacitor: 0f131577d41c082931f00cc080e2289d503465c8
+  CapacitorCordova: 3375b39b5ebca770ac7869f85e4dea32a642c9e0
 
-PODFILE CHECKSUM: 436a5b37bc2b2ae30dea4ac9e0d07790ba30660f
+PODFILE CHECKSUM: e66d6fa04b0daaf06d8498d39637adf77139c716
 
-COCOAPODS: 1.7.1
+COCOAPODS: 1.10.0
