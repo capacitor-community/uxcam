@@ -1,6 +1,6 @@
 [![npm version](https://badge.fury.io/js/%40clipboardhealth%2Fcapacitor-app-analytics@2x.png)](https://badge.fury.io/js/%40clipboardhealth%2Fcapacitor-app-analytics)
 
-# capacitor-app-analytics
+# UXCam
 
 Capacitor plugin for [UXCam](https://uxcam.com/) and [FullStory](https://www.fullstory.com/) analytics. It uses UXCam for Android and iOS platforms and FullStory for Web/PWA.
 

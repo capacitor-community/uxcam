@@ -1,37 +1,48 @@
 {
-  "name": "@clipboardhealth/capacitor-app-analytics",
-  "version": "0.0.2",
-  "description": "UXCam and FullStory app analytics",
-  "main": "dist/esm/index.js",
+  "name": "@capacitor-community/uxcam",
+  "version": "0.0.1",
+  "description": "Capacitor plugin for UXCam and FullStory analytics. It uses UXCam for Android and iOS platforms and FullStory for Web/PWA.",
+  "main": "dist/plugin.js",
+  "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "scripts": {
-    "build": "npm run clean && tsc",
-    "clean": "rm -rf ./dist",
+    "lint": "npm run prettier -- --check && npm run swiftlint -- lint",
+    "prettier": "prettier \"**/*.{css,html,ts,js,java}\"",
+    "swiftlint": "node-swiftlint",
+    "build": "npm run clean && tsc && rollup -c rollup.config.js",
+    "clean": "rimraf ./dist",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build"
   },
-  "author": "Bharani",
+  "author": "CloudNesil",
   "license": "MIT",
-  "dependencies": {
-    "@capacitor/core": "latest"
-  },
   "devDependencies": {
-    "typescript": "^3.2.4",
-    "@capacitor/ios": "latest",
-    "@capacitor/android": "latest"
+    "@capacitor/android": "^2.4.6",
+    "@capacitor/core": "^2.4.6",
+    "@capacitor/ios": "^2.4.6",
+    "@ionic/prettier-config": "^1.0.0",
+    "@ionic/swiftlint-config": "^1.0.0",
+    "@rollup/plugin-node-resolve": "^8.1.0",
+    "prettier": "^2.0.5",
+    "prettier-plugin-java": "^0.8.0",
+    "rimraf": "^3.0.0",
+    "rollup": "^2.21.0",
+    "swiftlint": "^1.0.1",
+    "typescript": "~3.8.3"
+  },
+  "peerDependencies": {
+    "@capacitor/core": "^2.4.6"
   },
   "files": [
     "dist/",
     "ios/",
     "android/",
-    "ClipboardhealthCapacitorAppAnalytics.podspec"
+    "UXCam.podspec"
   ],
   "keywords": [
     "capacitor",
     "plugin",
-    "native",
-    "uxcam",
-    "fullstory"
+    "native"
   ],
   "capacitor": {
     "ios": {
@@ -41,12 +52,13 @@
       "src": "android"
     }
   },
+  "prettier": "@ionic/prettier-config",
+  "swiftlint": "@ionic/swiftlint-config",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ClipboardHealth/capacitor-app-analytics.git"
+    "url": "https://github.com/SalahAdDin/capacitor-uxcam.git"
   },
   "bugs": {
-    "url": " https://github.com/ClipboardHealth/capacitor-app-analytics.git/issues"
-  },
-  "homepage": "https://github.com/ClipboardHealth/capacitor-app-analytics#readme"
+    "url": "https://github.com/SalahAdDin/capacitor-uxcam.git/issues"
+  }
 }
