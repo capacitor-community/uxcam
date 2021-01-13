@@ -1,6 +1,6 @@
 {
   "name": "@capacitor-community/uxcam",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Capacitor plugin for UXCam and FullStory analytics. It uses UXCam for Android and iOS platforms and FullStory for Web/PWA.",
   "main": "dist/plugin.js",
   "module": "dist/esm/index.js",
