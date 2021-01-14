@@ -21,5 +21,5 @@
 #-renamesourcefileattribute SourceFile
 
 # UxCam service
--keep class com.uxcam.** { *; }
+-keep class com.uxcam.* { *; }
 -dontwarn com.uxcam.**

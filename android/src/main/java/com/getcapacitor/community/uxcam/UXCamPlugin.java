@@ -5,7 +5,6 @@ import com.getcapacitor.NativePlugin;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
-import org.json.JSONException;
 import java.util.Iterator;
 
 import com.uxcam.UXCam;
