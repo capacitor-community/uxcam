@@ -51,7 +51,7 @@ public class UXCam: CAPPlugin {
     }
 
     @objc func setMultiSessionRecord(_ call: CAPPluginCall) {
-        Bool enabled = call.getString("recordMultipleSessions") ?? false
+        Bool enabled = call.getString("recordMultipleSessions") ?? true
         UXCam.setMultiSessionRecord(enabled)
         call.success()
     }
@@ -71,7 +71,7 @@ public class UXCam: CAPPlugin {
     }
 
     @objc func setAutomaticScreenNameTagging(_ call: CAPPluginCall) {
-        Bool enable = call.getString("enable") ?? false
+        Bool enable = call.getString("enable") ?? true
         UXCam.setAutomaticScreenNameTagging(enable)
         call.success()
     }

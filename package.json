@@ -37,7 +37,7 @@
     "dist/",
     "ios/",
     "android/",
-    "UXCam.podspec"
+    "CapacitorCommunityUxcam.podspec"
   ],
   "keywords": [
     "capacitor",
