@@ -1,5 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.getcapacitor.community.uxcam.UXCam">
 
-  <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="com.getcapacitor.community.uxcam.UXCam">
-  </manifest>
+    <application>
+        <service android:name="com.uxcam.service.HttpPostService" />
+    </application>
+</manifest>
   
