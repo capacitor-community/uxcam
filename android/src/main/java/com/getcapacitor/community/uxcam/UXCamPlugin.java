@@ -11,7 +11,7 @@ import java.util.Iterator;
 import com.uxcam.UXCam;
 
 @NativePlugin
-public class UXCam extends Plugin {
+public class UXCamPlugin extends Plugin {
 
     @PluginMethod
     public void echo(PluginCall call) {
@@ -24,13 +24,13 @@ public class UXCam extends Plugin {
 
     @PluginMethod()
     public void logEvent(PluginCall call) {
-        String eventName = call.getString("eventName")
+        String eventName = call.getString("eventName");
         // JSObject rawProperties = call.getObject("properties", new JSObject());
         //Iterator<String> userProperties = rawProperties.keys();
         JSObject properties = call.getObject("properties", new JSObject());
 
-        if (properties.isEmpty()) UXCam.logEvent(eventName)
-        else UXCam.logEvent(eventName, properties)
+        if (properties.length() == 0) UXCam.logEvent(eventName);
+        else UXCam.logEvent(eventName, properties);
         /*{
             final Map<String, String> properties = new HashMap<String, String>();
             while (userProperties.hasNext()) {
@@ -53,7 +53,7 @@ public class UXCam extends Plugin {
     @PluginMethod()
     public void setUserIdentity(PluginCall call){
         String userIdentity = call.getString("userIdentity");
-        UXCam.setUserIdentity(name);
+        UXCam.setUserIdentity(userIdentity);
         call.success();
     }
 
@@ -75,13 +75,13 @@ public class UXCam extends Plugin {
 
     @PluginMethod()
     public void setMultiSessionRecord(PluginCall call){
-        boolean enabled = call.getString("recordMultipleSessions")
-        UXCam.setMultiSessionRecord(enabled)
-        call.success()
+        boolean enabled = call.getBoolean("recordMultipleSessions", true);
+        UXCam.setMultiSessionRecord(enabled);
+        call.success();
     }
 
     @PluginMethod()
-    public boolean getEnabledMultiSessionRecord(PluginCall call){
+    public void getEnabledMultiSessionRecord(PluginCall call){
         JSObject ret = new JSObject();
         boolean enabled = UXCam.getMultiSessionRecord();
         ret.put("value", enabled);
@@ -97,9 +97,9 @@ public class UXCam extends Plugin {
 
     @PluginMethod()
     public void setAutomaticScreenNameTagging(PluginCall call) {
-        boolean enable = call.getString("enable")
-        UXCam.setAutomaticScreenNameTagging(enable)
-        call.success()
+        boolean enable = call.getBoolean("enable", true);
+        UXCam.setAutomaticScreenNameTagging(enable);
+        call.success();
     }
 
     @PluginMethod()
