@@ -1,7 +1,7 @@
 ext {
-    junitVersion =  project.hasProperty('junitVersion') ? rootProject.ext.junitVersion : '4.12'
-    androidxJunitVersion =  project.hasProperty('androidxJunitVersion') ? rootProject.ext.androidxJunitVersion : '1.1.1'
-    androidxEspressoCoreVersion =  project.hasProperty('androidxEspressoCoreVersion') ? rootProject.ext.androidxEspressoCoreVersion : '3.2.0'
+    junitVersion = project.hasProperty('junitVersion') ? rootProject.ext.junitVersion : '4.12'
+    androidxJunitVersion = project.hasProperty('androidxJunitVersion') ? rootProject.ext.androidxJunitVersion : '1.1.1'
+    androidxEspressoCoreVersion = project.hasProperty('androidxEspressoCoreVersion') ? rootProject.ext.androidxEspressoCoreVersion : '3.2.0'
 }
 
 buildscript {
@@ -37,20 +37,19 @@ android {
 }
 
 repositories {
-    google()
     jcenter()
-    mavenCentral()
-  maven{
-     url 'https://sdk.uxcam.com/android/'
-  }
+    maven {
+        url 'https://sdk.uxcam.com/android/'
+    }
 }
 
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':capacitor-android')
-    implementation 'com.uxcam:uxcam:3.3.4@aar'
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
+
+    implementation 'com.uxcam:uxcam:3.3.4@aar'
 }
