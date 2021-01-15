@@ -59,9 +59,9 @@ export class UXCamPluginWeb  extends WebPlugin implements UXCamPlugin {
   }
 }
 
-const UXCamPlugin = new UXCamPluginWeb();
+const UXCam = new UXCamPluginWeb();
 
-export { UXCamPlugin };
+export { UXCam };
 
 import { registerWebPlugin } from '@capacitor/core';
-registerWebPlugin(UXCamPlugin);
+registerWebPlugin(UXCam);
