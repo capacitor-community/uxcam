@@ -1,80 +1,36 @@
-[![npm version](https://badge.fury.io/js/%40clipboardhealth%2Fcapacitor-app-analytics@2x.png)](https://badge.fury.io/js/%40clipboardhealth%2Fcapacitor-app-analytics)
+<p align="center"><br><img src="https://user-images.githubusercontent.com/236501/85893648-1c92e880-b7a8-11ea-926d-95355b8175c7.png" width="128" height="128" /></p>
+<h3 align="center">UXCam</h3>
+<p align="center"><strong><code>@capacitor-community/uxcam</code></strong></p>
+<p align="center">
+  Capacitor plugin for UXCam and FullStory analytics. It uses UXCam for Android and iOS platforms and FullStory for Web/PWA.
+</p>
 
-# UXCam
+<p align="center">
+  <img src="https://img.shields.io/maintenance/yes/2020?style=flat-square" />
+  <a href="https://github.com/capacitor-community/example/actions?query=workflow%3A%22CI%22"><img src="https://img.shields.io/github/workflow/status/capacitor-community/example/CI?style=flat-square" /></a>
+  <a href="https://www.npmjs.com/package/@capacitor-community/example"><img src="https://img.shields.io/npm/l/@capacitor-community/example?style=flat-square" /></a>
+<br>
+  <a href="https://www.npmjs.com/package/@capacitor-community/example"><img src="https://img.shields.io/npm/dw/@capacitor-community/example?style=flat-square" /></a>
+  <a href="https://www.npmjs.com/package/@capacitor-community/example"><img src="https://img.shields.io/npm/v/@capacitor-community/example?style=flat-square" /></a>
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+<a href="#contributors-"><img src="https://img.shields.io/badge/all%20contributors-0-orange?style=flat-square" /></a>
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+</p>
 
-Capacitor plugin for [UXCam](https://uxcam.com/) and [FullStory](https://www.fullstory.com/) analytics. It uses UXCam for Android and iOS platforms and FullStory for Web/PWA.
+## Maintainers
+
+| Maintainer | GitHub | Social |
+| -----------| -------| -------|
+| Ionitron (example) | [Ionitron](https://github.com/ionitron) | [@ionitron](https://twitter.com/ionitron) |
 
 ## Installation
 
-```
-npm i @clipboardhealth/capacitor-app-analytics
-```
+TODO
 
-### Android Configuration
+## Configuration
 
-In file `android/app/src/main/java/**/**/MainActivity.java`, add the plugin to the initialization list:
+TODO
 
-```
-this.init(savedInstanceState, new ArrayList<Class<? extends Plugin>>() {{
-  [...]
-  add(health.clipboard.analytics.app.capacitor.CapacitorAppAnalytics.class);
-  [...]
-}});
-```
+## Usage
 
-In file `android/app/src/main/AndroidManifest.xml`, add the following XML elements under `<manifest><application>` :
-
-```
-<service android:name="com.uxcam.service.HttpPostService"/>
-```
-
-### iOS Configuration
-
-None
-
-### Web
-
-Paste your FullStory snippet in the `<head>`.
-
-More information can be found here: [https://help.fullstory.com/hc/en-us/articles/360020623514-How-do-I-get-FullStory-up-and-running-on-my-site-](https://help.fullstory.com/hc/en-us/articles/360020623514-How-do-I-get-FullStory-up-and-running-on-my-site-)
-
-## Methods
-
-### startWithKey(options: { UXCamKey: string })
-
-Starts tracking the session
-
-```
-Plugins.CapacitorAppAnalytics.startWithKey({ UXCamKey: 'your_uxcam_api_key' })
-```
-
-### setUserProperty(options: UserProperty)
-
-Sets the user property of the session user
-
-```
-Plugins.CapacitorAppAnalytics.setUserProperty({
-    userId: '$userId',
-    name: 'name,
-    userInfo: {
-      ...extra properties of the user
-    },
-  })
-
-```
-
-### tagScreenName(options: { screenName: string })
-
-Track the name of the screen
-
-```
-Plugins.CapacitorAppAnalytics.tagScreenName({ screenName: 'LoginScreen' })
-```
-
-### stopSession()
-
-Stops the current session
-
-```
-Plugins.CapacitorAppAnalytics.stopSession()
-```
+TODO

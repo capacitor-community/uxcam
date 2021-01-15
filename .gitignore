@@ -5,18 +5,40 @@
 # node files
 dist/
 node_modules/
+.sourcemaps
+cli/dist/commands/copy.js
+test_project/
+*.map
 
 # iOS files
 Pods
 Build
 xcuserdata
+Podfile.lock
 
 # macOS files
 .DS_Store
 
 
+# Capacitor
+capacitor-ios/
+contents.xcworkspacedata
+
+# Cordova files
+site/www
+example/www/
+example/electron/www/*
+example/electron/capacitor.config.json
+example/android/app/src/main/assets/public/*
+!example/android/app/src/main/assets/public/.gitkeep
+example/ios/IonicRunner/public/*
+!example/ios/IonicRunner/public/.gitkeep
+
 
 # Based on Android gitignore template: https://github.com/github/gitignore/blob/master/Android.gitignore
+android-template.iml
+android-template/.gradle/
+android-template/app/app.iml
 
 # Built application files
 *.apk
@@ -62,3 +84,14 @@ captures/
 
 # External native build folder generated in Android Studio 2.2 and later
 .externalNativeBuild
+
+Build/*
+Index/
+.*.sw*
+!/build/.npmkeep
+lerna-debug.log
+.stencil/
+/site/.env
+/site/.firebase
+.settings/
+.project
