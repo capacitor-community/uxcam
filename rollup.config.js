@@ -5,7 +5,7 @@ export default {
   output: {
     file: 'dist/plugin.js',
     format: 'iife',
-    name: 'uxCam',
+    name: 'capacitorUXCam',
     globals: {
       '@capacitor/core': 'capacitorExports',
     },

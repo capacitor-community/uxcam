@@ -6,8 +6,8 @@ import UXCam
  * Please read the Capacitor iOS Plugin Development Guide
  * here: https://capacitorjs.com/docs/plugins/ios
  */
-@objc(UXCam)
-public class UXCam: CAPPlugin {
+@objc(UXCamPlugin)
+public class UXCamPlugin: CAPPlugin {
 
     @objc func echo(_ call: CAPPluginCall) {
         let value = call.getString("value") ?? ""

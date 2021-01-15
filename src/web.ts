@@ -3,10 +3,10 @@ import { LogEventProperty, UserProperty, UXCamPlugin } from './definitions';
 
 declare const FS: any;
 
-export class UXCamWeb extends WebPlugin implements UXCamPlugin {
+export class UXCamPluginWeb  extends WebPlugin implements UXCamPlugin {
   constructor() {
     super({
-      name: 'UXCam',
+      name: 'UXCamPlugin',
       platforms: ['web'],
     });
   }
@@ -59,10 +59,9 @@ export class UXCamWeb extends WebPlugin implements UXCamPlugin {
   }
 }
 
-const UXCam = new UXCamWeb();
+const UXCamPlugin = new UXCamPluginWeb();
 
-export { UXCam };
+export { UXCamPlugin };
 
 import { registerWebPlugin } from '@capacitor/core';
-
-registerWebPlugin(UXCam);
+registerWebPlugin(UXCamPlugin);
