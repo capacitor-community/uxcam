@@ -16,7 +16,7 @@ public class UXCamPlugin: CAPPlugin {
         ])
     }
 
-    @objc func startWithKey(_ call: CAPPluginCall) {
+    @objc func logEvent(_ call: CAPPluginCall) {
         String eventName = call.getString("eventName") ?? ""
         let properties = call.getObject("properties", defaultValue: [:])
 

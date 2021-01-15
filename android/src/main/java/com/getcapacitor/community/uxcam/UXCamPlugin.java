@@ -24,22 +24,10 @@ public class UXCamPlugin extends Plugin {
     @PluginMethod()
     public void logEvent(PluginCall call) {
         String eventName = call.getString("eventName");
-        // JSObject rawProperties = call.getObject("properties", new JSObject());
-        //Iterator<String> userProperties = rawProperties.keys();
         JSObject properties = call.getObject("properties", new JSObject());
 
         if (properties.length() == 0) UXCam.logEvent(eventName);
         else UXCam.logEvent(eventName, properties);
-        /*{
-            final Map<String, String> properties = new HashMap<String, String>();
-            while (userProperties.hasNext()) {
-                String property = (String) userProperties.next();
-                String propertyValue = userInfo.getString(property);
-
-                properties.push(property, propertyValue)
-            }
-             UXCam.logEvent(eventName, properties)
-        }*/
     }
 
     @PluginMethod()
