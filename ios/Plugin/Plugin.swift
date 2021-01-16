@@ -17,15 +17,15 @@ public class UXCamPlugin: CAPPlugin {
     }
 
     @objc func logEvent(_ call: CAPPluginCall) {
-        String eventName = call.getString("eventName") ?? ""
+        let eventName = call.getString("eventName") ?? ""
         let properties = call.getObject("properties", defaultValue: [:])
 
-        if (properties.isEmpty) UXCam.logEvent(eventName)
-        else UXCam.logEvent(eventName,withProperties: properties)
+        if (properties.isEmpty) {UXCam.logEvent(eventName)}
+        else {UXCam.logEvent(eventName,withProperties: properties)}
     }
 
     @objc func startWithKey(_ call: CAPPluginCall) {
-        String UXCamKey = call.getString("UXCamKey") ?? ""
+        let UXCamKey = call.getString("UXCamKey") ?? ""
         let type = "cordova"
 
         UXCam.pluginType(type, version: "3.1.5")
@@ -36,7 +36,7 @@ public class UXCamPlugin: CAPPlugin {
     }
 
     @objc func setUserIdentity(_ call: CAPPluginCall) {
-        String userIdentity = call.getString("userIdentity") ?? ""
+        let userIdentity = call.getString("userIdentity") ?? ""
         UXCam.setUserIdentity(userIdentity)
         call.success()
     }
@@ -51,27 +51,27 @@ public class UXCamPlugin: CAPPlugin {
     }
 
     @objc func setMultiSessionRecord(_ call: CAPPluginCall) {
-        Bool enabled = call.getString("recordMultipleSessions") ?? true
+        let enabled = call.getString("recordMultipleSessions") ?? true
         UXCam.setMultiSessionRecord(enabled)
         call.success()
     }
 
     @objc func getEnabledMultiSessionRecord(_ call: CAPPluginCall) {
-        Bool enabled = UXCam.getMultiSessionRecord()
+        let enabled = UXCam.getMultiSessionRecord()
         call.success([
             "value": enabled
         ])
     }
 
     @objc func tagScreenName(_ call: CAPPluginCall) {
-        String screenName = call.getString("screenName") ?? ""
+        let screenName = call.getString("screenName") ?? ""
 
         UXCam.tagScreenName(screenName)
         call.success()
     }
 
     @objc func setAutomaticScreenNameTagging(_ call: CAPPluginCall) {
-        Bool enable = call.getString("enable") ?? true
+        let enable = call.getString("enable") ?? true
         UXCam.setAutomaticScreenNameTagging(enable)
         call.success()
     }
