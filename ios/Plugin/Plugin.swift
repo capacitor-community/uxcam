@@ -17,7 +17,7 @@ public class UXCamPlugin: CAPPlugin {
     @objc func logEvent(_ call: CAPPluginCall) {
         let eventName = call.getString("eventName") ?? ""
         let properties = call.getObject("properties", defaultValue: [:])
-        if (properties.isEmpty) {
+        if (properties!.isEmpty) {
             UXCam.logEvent(eventName)
         }
         else {
@@ -30,7 +30,7 @@ public class UXCamPlugin: CAPPlugin {
         let type = "cordova"
         UXCam.pluginType(type, version: "3.1.5")
         UXCam.optIntoSchematicRecordings()
-        UXCam.start(withKey: UXCamKey, buildIdentifier: nil)
+        UXCam.start(withKey: UXCamKey)
         call.success()
     }
     
@@ -49,7 +49,7 @@ public class UXCamPlugin: CAPPlugin {
     }
     
     @objc func setMultiSessionRecord(_ call: CAPPluginCall) {
-        let enabled = call.getString("recordMultipleSessions") ?? true
+        let enabled = call.getBool("recordMultipleSessions") ?? true
         UXCam.setMultiSessionRecord(enabled)
         call.success()
     }
@@ -66,7 +66,7 @@ public class UXCamPlugin: CAPPlugin {
     }
     
     @objc func setAutomaticScreenNameTagging(_ call: CAPPluginCall) {
-        let enable = call.getString("enable") ?? true
+        let enable = call.getBool("enable") ?? true
         UXCam.setAutomaticScreenNameTagging(enable)
         call.success()
     }
