@@ -8,11 +8,11 @@
 
 <p align="center">
   <img src="https://img.shields.io/maintenance/yes/2020?style=flat-square" />
-  <a href="https://github.com/capacitor-community/example/actions?query=workflow%3A%22CI%22"><img src="https://img.shields.io/github/workflow/status/capacitor-community/example/CI?style=flat-square" /></a>
-  <a href="https://www.npmjs.com/package/@capacitor-community/example"><img src="https://img.shields.io/npm/l/@capacitor-community/example?style=flat-square" /></a>
+  <a href="https://github.com/capacitor-community/uxcam/actions?query=workflow%3A%22CI%22"><img src="https://img.shields.io/github/workflow/status/capacitor-community/uxcam/CI?style=flat-square" /></a>
+  <a href="https://www.npmjs.com/package/@capacitor-community/uxcam"><img src="https://img.shields.io/npm/l/@capacitor-community/uxcam?style=flat-square" /></a>
 <br>
-  <a href="https://www.npmjs.com/package/@capacitor-community/example"><img src="https://img.shields.io/npm/dw/@capacitor-community/example?style=flat-square" /></a>
-  <a href="https://www.npmjs.com/package/@capacitor-community/example"><img src="https://img.shields.io/npm/v/@capacitor-community/example?style=flat-square" /></a>
+  <a href="https://www.npmjs.com/package/@capacitor-community/uxcam"><img src="https://img.shields.io/npm/dw/@capacitor-community/uxcam?style=flat-square" /></a>
+  <a href="https://www.npmjs.com/package/@capacitor-community/uxcam"><img src="https://img.shields.io/npm/v/@capacitor-community/uxcam?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 <a href="#contributors-"><img src="https://img.shields.io/badge/all%20contributors-0-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
@@ -30,8 +30,7 @@
 Install the package from the repository(by now):
 
 ```bash
-# npm install @capacitor-community/uxcam
-npm install SalahAdDin/capacitor-uxcam#dist
+npm install @capacitor-community/uxcam
 ionic cap update && ionic cap copy && ionic cap sync 
 ```
 
@@ -184,7 +183,7 @@ UXCamPlugin.stopSession(): Promise<void>
 
 ## Further info
 
-- [Android](https://firebase.google.com/docs/android/setup)
-- [iOS](https://firebase.google.com/docs/analytics/get-started?platform=ios)
-- [Web](https://firebase.google.com/docs/analytics/get-started?platform=web)
+- [Android](https://help.uxcam.com/hc/en-us/articles/115000966252-Android-Integration)
+- [iOS](https://help.uxcam.com/hc/en-us/articles/115001868272-iOS-Integration)
+- [Web](https://developer.fullstory.com/introduction)
 

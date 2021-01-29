@@ -56,9 +56,9 @@
   "swiftlint": "@ionic/swiftlint-config",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SalahAdDin/capacitor-uxcam.git"
+    "url": "https://github.com/capacitor-community/uxcam.git"
   },
   "bugs": {
-    "url": "https://github.com/SalahAdDin/capacitor-uxcam.git/issues"
+    "url": "https://github.com/capacitor-community/uxcam.git"
   }
 }
