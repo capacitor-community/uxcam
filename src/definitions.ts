@@ -32,5 +32,9 @@ export interface UXCamPlugin {
 
   setAutomaticScreenNameTagging(options: { enable: boolean }): Promise<void>;
 
-  stopSession(): Promise<void>
+  stopSession(): Promise<void>;
+
+  pauseScreenRecording(): Promise<void>;
+
+  resumeScreenRecording(): Promise<void>;
 }

@@ -57,6 +57,14 @@ export class UXCamPluginWeb  extends WebPlugin implements UXCamPlugin {
   async tagScreenName(): Promise<void> {
     console.debug('Not supported for Full Story');
   }
+
+  async pauseScreenRecording(): Promise<void> {
+    console.debug('Not supported for Full Story');
+  }
+
+  async resumeScreenRecording(): Promise<void> {
+    console.debug('Not supported for Full Story');
+  }
 }
 
 const UXCam = new UXCamPluginWeb();

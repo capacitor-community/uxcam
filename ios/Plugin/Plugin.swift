@@ -13,7 +13,7 @@ public class UXCamPlugin: CAPPlugin {
         let value = call.getString("value") ?? ""
         call.success(["value": value])
     }
-    
+
     @objc func logEvent(_ call: CAPPluginCall) {
         let eventName = call.getString("eventName") ?? ""
         let properties = call.getObject("properties", defaultValue: [:])
@@ -24,7 +24,7 @@ public class UXCamPlugin: CAPPlugin {
             UXCam.logEvent(eventName,withProperties: properties)
         }
     }
-    
+
     @objc func startWithKey(_ call: CAPPluginCall) {
         let UXCamKey = call.getString("UXCamKey") ?? ""
         let type = "cordova"
@@ -33,13 +33,13 @@ public class UXCamPlugin: CAPPlugin {
         UXCam.start(withKey: UXCamKey)
         call.success()
     }
-    
+
     @objc func setUserIdentity(_ call: CAPPluginCall) {
         let userIdentity = call.getString("userIdentity") ?? ""
         UXCam.setUserIdentity(userIdentity)
         call.success()
     }
-    
+
     @objc func setUserProperty(_ call: CAPPluginCall) {
         let userInfo = call.getObject("properties", defaultValue: [:])
         for (key, value) in userInfo ?? [:] {
@@ -47,33 +47,44 @@ public class UXCamPlugin: CAPPlugin {
         }
         call.success()
     }
-    
+
     @objc func setMultiSessionRecord(_ call: CAPPluginCall) {
         let enabled = call.getBool("recordMultipleSessions") ?? true
         UXCam.setMultiSessionRecord(enabled)
         call.success()
     }
-    
+
     @objc func getEnabledMultiSessionRecord(_ call: CAPPluginCall) {
         let enabled = UXCam.getMultiSessionRecord()
         call.success(["value": enabled])
     }
-    
+
     @objc func tagScreenName(_ call: CAPPluginCall) {
         let screenName = call.getString("screenName") ?? ""
-        UXCam.tagScreenName(screenName)
+        DispatchQueue.main.async {
+            UXCam.tagScreenName(screenName)
+        }
         call.success()
     }
-    
+
     @objc func setAutomaticScreenNameTagging(_ call: CAPPluginCall) {
         let enable = call.getBool("enable") ?? true
         UXCam.setAutomaticScreenNameTagging(enable)
         call.success()
     }
-    
+
     @objc func stopSession(_ call: CAPPluginCall) {
         UXCam.stopSessionAndUploadData()
         call.success()
     }
-    
+
+    @objc func pauseScreenRecording(_ call: CAPPluginCall) {
+        UXCam.pauseScreenRecording()
+        call.success()
+    }
+
+    @objc func resumeScreenRecording(_ call: CAPPluginCall) {
+        UXCam.resumeScreenRecording()
+        call.success()
+    }
 }
