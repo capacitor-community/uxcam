@@ -14,4 +14,6 @@ CAP_PLUGIN(UXCamPlugin, "UXCamPlugin",
            CAP_PLUGIN_METHOD(tagScreenName, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(setAutomaticScreenNameTagging, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(stopSession, CAPPluginReturnPromise);
+           CAP_PLUGIN_METHOD(pauseScreenRecording, CAPPluginReturnPromise);
+           CAP_PLUGIN_METHOD(resumeScreenRecording, CAPPluginReturnPromise);
 )

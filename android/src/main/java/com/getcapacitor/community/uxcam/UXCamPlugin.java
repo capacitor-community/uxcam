@@ -94,4 +94,16 @@ public class UXCamPlugin extends Plugin {
         UXCam.stopSessionAndUploadData();
         call.success();
     }
+
+    @PluginMethod()
+    public void pauseScreenRecording(PluginCall call) {
+        UXCam.pauseScreenRecording();
+        call.success();
+    }
+
+    @PluginMethod()
+    public void resumeScreenRecording(PluginCall call) {
+        UXCam.resumeScreenRecording();
+        call.success();
+    }
 }
